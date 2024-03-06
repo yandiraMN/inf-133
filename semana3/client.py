@@ -1,5 +1,4 @@
 import requests
-
 # Consultando a un servidor RESTful
 url = "http://localhost:8000/"
 # GET obtener a todos los estudiantes por la ruta /estudiantes
