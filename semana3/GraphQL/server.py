@@ -2,11 +2,17 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 from graphene import ObjectType, String, Int, List, Schema
 
+
 class Query(ObjectType):
     hello = String()
+    
     def resolve_hello(root, info):
-        return  "Hello World!"
-        schema = Schema(query=Query)
+        return "Hello, world!"
+    
+
+
+schema = Schema(query=Query)
+
 
 class GraphQLRequestHandler(BaseHTTPRequestHandler):
     def response_handler(self, status, data):
